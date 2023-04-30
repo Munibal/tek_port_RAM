@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "E:/fbga/tek_port_RAM/src/tek_port_ram.v",
+  "InstLine" : 1,
+  "InstName" : "ram_single",
+  "ModuleFile" : "E:/fbga/tek_port_RAM/src/tek_port_ram.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "ram_single"
+ }
+]

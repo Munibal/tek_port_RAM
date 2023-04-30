@@ -1,0 +1,159 @@
+//
+//Written by GowinSynthesis
+//Product Version "V1.9.8.11"
+//Sun Apr 30 23:21:10 2023
+
+//Source file index table:
+//file0 "\E:/fbga/tek_port_RAM/src/tek_port_ram.v"
+`timescale 100 ps/100 ps
+module ram_single (
+  data,
+  addr,
+  we,
+  clk,
+  q
+)
+;
+input [7:0] data;
+input [7:0] addr;
+input we;
+input clk;
+output [7:0] q;
+wire we_d;
+wire clk_d;
+wire [7:0] data_d;
+wire [7:0] addr_d;
+wire [7:0] q_d;
+wire [31:8] DO;
+wire VCC;
+wire GND;
+  IBUF data_0_ibuf (
+    .O(data_d[0]),
+    .I(data[0]) 
+);
+  IBUF data_1_ibuf (
+    .O(data_d[1]),
+    .I(data[1]) 
+);
+  IBUF data_2_ibuf (
+    .O(data_d[2]),
+    .I(data[2]) 
+);
+  IBUF data_3_ibuf (
+    .O(data_d[3]),
+    .I(data[3]) 
+);
+  IBUF data_4_ibuf (
+    .O(data_d[4]),
+    .I(data[4]) 
+);
+  IBUF data_5_ibuf (
+    .O(data_d[5]),
+    .I(data[5]) 
+);
+  IBUF data_6_ibuf (
+    .O(data_d[6]),
+    .I(data[6]) 
+);
+  IBUF data_7_ibuf (
+    .O(data_d[7]),
+    .I(data[7]) 
+);
+  IBUF addr_0_ibuf (
+    .O(addr_d[0]),
+    .I(addr[0]) 
+);
+  IBUF addr_1_ibuf (
+    .O(addr_d[1]),
+    .I(addr[1]) 
+);
+  IBUF addr_2_ibuf (
+    .O(addr_d[2]),
+    .I(addr[2]) 
+);
+  IBUF addr_3_ibuf (
+    .O(addr_d[3]),
+    .I(addr[3]) 
+);
+  IBUF addr_4_ibuf (
+    .O(addr_d[4]),
+    .I(addr[4]) 
+);
+  IBUF addr_5_ibuf (
+    .O(addr_d[5]),
+    .I(addr[5]) 
+);
+  IBUF addr_6_ibuf (
+    .O(addr_d[6]),
+    .I(addr[6]) 
+);
+  IBUF addr_7_ibuf (
+    .O(addr_d[7]),
+    .I(addr[7]) 
+);
+  IBUF we_ibuf (
+    .O(we_d),
+    .I(we) 
+);
+  IBUF clk_ibuf (
+    .O(clk_d),
+    .I(clk) 
+);
+  OBUF q_0_obuf (
+    .O(q[0]),
+    .I(q_d[0]) 
+);
+  OBUF q_1_obuf (
+    .O(q[1]),
+    .I(q_d[1]) 
+);
+  OBUF q_2_obuf (
+    .O(q[2]),
+    .I(q_d[2]) 
+);
+  OBUF q_3_obuf (
+    .O(q[3]),
+    .I(q_d[3]) 
+);
+  OBUF q_4_obuf (
+    .O(q[4]),
+    .I(q_d[4]) 
+);
+  OBUF q_5_obuf (
+    .O(q[5]),
+    .I(q_d[5]) 
+);
+  OBUF q_6_obuf (
+    .O(q[6]),
+    .I(q_d[6]) 
+);
+  OBUF q_7_obuf (
+    .O(q[7]),
+    .I(q_d[7]) 
+);
+  SP ram_ram_0_0_s (
+    .DO({DO[31:8],q_d[7:0]}),
+    .DI({GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,GND,data_d[7:0]}),
+    .BLKSEL({GND,GND,GND}),
+    .AD({GND,GND,GND,addr_d[7:0],GND,GND,GND}),
+    .WRE(we_d),
+    .CLK(clk_d),
+    .CE(VCC),
+    .OCE(GND),
+    .RESET(GND) 
+);
+defparam ram_ram_0_0_s.BIT_WIDTH=8;
+defparam ram_ram_0_0_s.BLK_SEL=3'b000;
+defparam ram_ram_0_0_s.READ_MODE=1'b0;
+defparam ram_ram_0_0_s.RESET_MODE="SYNC";
+defparam ram_ram_0_0_s.WRITE_MODE=2'b01;
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* ram_single */

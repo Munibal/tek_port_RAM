@@ -1,0 +1,16 @@
+{
+ "Files" : [
+  {
+   "Path" : "E:/fbga/tek_port_RAM/src/tek_port_ram.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "E:/fbga/tek_port_RAM/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}
